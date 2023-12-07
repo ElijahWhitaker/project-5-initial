@@ -10,19 +10,18 @@ public class SortingUtility {
 
         for (int index = 0; index < data.length - 1; index++) {
 
-            // Assume first value is min
+
             min = index;
 
             for (int scan = index + 1; scan < data.length; scan++) {
 
-                // Find minimum value
+
                 if (data[scan].compareTo(data[min]) < 0) {
                     min = scan;
                 }
 
             }
 
-            // Swap minimum value with the lowest index
             swap(data, min, index);
         }
     }

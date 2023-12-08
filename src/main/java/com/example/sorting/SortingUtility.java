@@ -22,7 +22,6 @@ public class SortingUtility {
 
 
     public static <T extends Comparable<T>> void cocktailShakerSort(T[] data) {
-
             // TODO implement Cocktail Shaker Sort here\
         int[] a = new int[0];
             boolean swapped;

@@ -4,27 +4,22 @@ public class SortingUtility {
 
 
     public static <T extends Comparable<T>> void gnomeSort(T[] data) {
-
-        // TODO implement Gnome Sort here
-        int min;
-
-        for (int index = 0; index < data.length - 1; index++) {
-
-
-            min = index;
-
-            for (int scan = index + 1; scan < data.length; scan++) {
-
-
-                if (data[scan].compareTo(data[min]) < 0) {
-                    min = scan;
-                }
-
+           // TODO implement Gnome Sort here
+        int pos = 0;
+        int[] a = new int[0];
+        while (pos < a.length) {
+            if (pos == 0 || a[pos] >= a[pos - 1]) {
+                pos++;
+            } else {
+                // Swap a[pos] and a[pos-1]
+                int temp = a[pos];
+                a[pos] = a[pos - 1];
+                a[pos - 1] = temp;
+                pos--;
             }
-
-            swap(data, min, index);
         }
     }
+
 
         
     public static <T extends Comparable<T>> void cocktailShakerSort(T[] data){
